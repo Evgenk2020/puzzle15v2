@@ -1,6 +1,6 @@
 # puzzle15v2
 
-Puzzle 15 for Linux terminal
+<b>Puzzle 15 for Linux terminal</b>
 
 The 15 Puzzle, also known as the sliding puzzle or Gem Puzzle, is a classic logic puzzle consisting of a 4×4 grid with 15 numbered square tiles and one empty space. The goal is to arrange the tiles in numerical order (1 to 15) by sliding them into the empty space.
 
@@ -16,7 +16,28 @@ Use `build.sh` and `run.sh` from the source folder to compile and run the applic
 
 To compile and run the game:
 
-1. Clone the Repository:</br>
-`git clone https://github.com/Evgenk2020/puzzle15v2.git`</br>
-`cd puzzle15v2`
+1. Clone the Repository
 
+```SH
+
+git clone https://github.com/Evgenk2020/puzzle15v2.git
+
+cd puzzle15v2
+
+```
+
+2. Build the Project
+
+```SH
+
+./build.sh
+
+```
+
+3. Run the Game
+
+```SH
+
+./run.sh
+
+```
