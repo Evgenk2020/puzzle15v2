@@ -14,7 +14,9 @@ Press <b>`Esc`</b> to exit
 
 Use `build.sh` and `run.sh` from the source folder to compile and run the application
 
-To compile and run the game:
+<hr>
+
+<b>To compile and run the game</b>
 
 1. Clone the Repository
 
