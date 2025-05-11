@@ -21,6 +21,7 @@ To compile and run the game:
 ```SH
 
 git clone https://github.com/Evgenk2020/puzzle15v2.git
+
 cd puzzle15v2
 
 ```
