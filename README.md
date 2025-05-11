@@ -13,3 +13,10 @@ Press <b>`F1`</b> to restart game
 Press <b>`Esc`</b> to exit
 
 Use `build.sh` and `run.sh` from the source folder to compile and run the application
+
+To compile and run the game:
+
+1. Clone the Repository:</br>
+`git clone https://github.com/Evgenk2020/puzzle15v2.git`</br>
+`cd puzzle15v2`
+
