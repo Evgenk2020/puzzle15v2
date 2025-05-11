@@ -12,8 +12,6 @@ Press <b>`F1`</b> to restart game
 
 Press <b>`Esc`</b> to exit
 
-Use `build.sh` and `run.sh` from the source folder to compile and run the application
-
 <hr>
 
 <b>To compile and run the game</b>
