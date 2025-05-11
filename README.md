@@ -6,7 +6,7 @@ The 15 Puzzle, also known as the sliding puzzle or Gem Puzzle, is a classic logi
 
 ![Puzzle 15 screen image](/img/screen.png)
 
-Arrange the chips <b>`up` `down` `left`</b> and <b>`right`</b> keys
+Arrange the chips with <b>`up` `down` `left`</b> and <b>`right`</b> keys
 
 Press <b>`F1`</b> to restart game
 
