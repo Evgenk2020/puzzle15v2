@@ -15,7 +15,7 @@ void gaming()
 {
   keyboard_set keyboards;
   game puzzle(game_data());
-  print game_field_show;
+  print game_field_show;  
 
   game_field_show.set_board(puzzle.get_board());
 
@@ -24,6 +24,7 @@ void gaming()
   {
     system("clear");
     game_field_show.print_head();
+
     game_field_show.get_board();
     
     if (puzzle.is_solved())

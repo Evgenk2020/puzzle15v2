@@ -7,8 +7,8 @@ game::game(std::vector<int> temp) : values(temp) { score = 0; }
 
 bool game::is_solved()
 {
-    return std::equal(values.begin(), values.end() - 1, std::next(values.begin()), [](int a, int b)
-                      { return a + 1 == b; }) &&
+    return std::equal(values.begin(), values.end() - 2, std::next(values.begin()), [](int a, int b) -> bool
+                      { return (a + 1 == b); }) &&
            values.back() == 0;
 }
 

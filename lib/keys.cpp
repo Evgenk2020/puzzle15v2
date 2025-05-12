@@ -58,7 +58,7 @@ std::string keyboard_set::get_keyboard_manage_key()
     kmode = new keyboard_mode();
     kmode->take_symbol();
 
-    auto _find = [](const std::map<std::array<int, 4>, std::string> &_mm, std::array<int, 4> key)
+    auto _find = [](const std::map<std::array<int, 4>, std::string> &_mm, std::array<int, 4> key) -> std::string
     {
         if (auto it = _mm.find(key); it != _mm.end())
         {
