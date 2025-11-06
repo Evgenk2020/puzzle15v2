@@ -26,7 +26,15 @@ cd puzzle15v2
 
 ```
 
-2. Build the Project with .rpm setup package for Fedora/CentOS Stream by default
+2. Check for `rpm-build` package to be installed in your system. If not, install it from system repository
+
+```SH
+
+sudo dnf install rpm-build
+
+```
+
+3. Build the Project with .rpm setup package for Fedora/CentOS Stream by default.
 
 ```SH
 
@@ -34,7 +42,7 @@ cd puzzle15v2
 
 ```
 
-3. Install .rpm package from build folder
+4. Install .rpm package from build folder
 
 ```SH
 
