@@ -6,7 +6,7 @@ CURR_DIR=$(dirname $CURR_DIR)
 
 BUILD_TARGET=$CURR_DIR/build
 
-#rm -rd $BUILD_TARGET
+# rm -rd $BUILD_TARGET
 
 if [ -d $BUILD_TARGET ]
 then
@@ -16,7 +16,15 @@ else
   cd $BUILD_TARGET
 fi
 
-cmake -B $BUILD_TARGET -S $CURR_DIR
-cmake --build .
+cmake ..
+# make clean
+make
+cpack
+
+# cmake .. -G Ninja
+# ninja clean
+# ninja -t graph | dot -Tsvg -o project.svg
+# ninja -v -d stats
+# cpack
 
 exec $SHELL
