@@ -42,4 +42,6 @@ cd build && sudo dnf install *.rpm
 
 ```
 
-4. If using either than Fedora/CentOS Stream change the first string `set(assemble_tgz OFF)` in CMakeLists.txt to `set(assemble_tgz ON)` before building the Project. Move `.tar.gz` file to any folder and unpack it. Then run `fifteen` from unpacked folder.
+<hr>
+
+If using either than Fedora/CentOS Stream change the first string `set(assemble_tgz OFF)` in CMakeLists.txt to `set(assemble_tgz ON)` before building the Project. Move `.tar.gz` file to any folder and unpack it. Then run `fifteen` from unpacked folder.
