@@ -26,21 +26,9 @@ target_include_directories(mswap PUBLIC ${CMAKE_SOURCE_DIR}/include)
 add_library(print SHARED ${CMAKE_SOURCE_DIR}/lib/print.cpp)
 target_include_directories(print PUBLIC ${CMAKE_SOURCE_DIR}/include)
 
-# add_library(one STATIC ${CMAKE_SOURCE_DIR}/lib/*.cpp)
-# target_include_directories(one PUBLIC ${CMAKE_SOURCE_DIR}/include)
-
-# add_library(two SHARED ${CMAKE_SOURCE_DIR}/lib/*.cpp)
-# target_include_directories(two PUBLIC ${CMAKE_SOURCE_DIR}/include)
-
 add_executable(${PROJECT_NAME} ${CMAKE_SOURCE_DIR}/src/main.cpp)
 target_include_directories(${PROJECT_NAME} PUBLIC ${CMAKE_SOURCE_DIR}/include)
 target_link_libraries(${PROJECT_NAME} PRIVATE data_gen keys mswap print)
-
-# target_include_directories(${PROJECT_NAME} PUBLIC ${CMAKE_SOURCE_DIR}/include)
-# target_link_libraries(${PROJECT_NAME} PRIVATE one)
-# target_link_libraries(${PROJECT_NAME} PRIVATE two)
-
-# install(DIRECTORY path/to/extra/files/ DESTINATION share/fifteen/extra)
 
 install(TARGETS ${PROJECT_NAME} RUNTIME DESTINATION bin)
 install(TARGETS data_gen keys mswap print LIBRARY DESTINATION lib)
