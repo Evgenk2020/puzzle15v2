@@ -56,7 +56,7 @@ sudo dnf install rpm-build
 
 ```
 
-4. Install .rpm package from build folder
+4. Install `.rpm` package from build folder
 
 ```SH
 
