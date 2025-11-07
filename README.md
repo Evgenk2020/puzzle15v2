@@ -26,7 +26,7 @@ cd puzzle15v2
 
 ```
 
-2. Check for `rpm-build` package to be installed in your system.
+2. Check for <span style="color:blue;">`rpm-build`</span> package to be installed in your system.
 
 ```SH
 
