@@ -38,7 +38,8 @@ rpm -q rpm-build
 
 ```
 
-If so you will see `rpm-build-6.0.0-1.fc43.x86_64` or something like that. If not it will be `package rpm-build is not installed`.<br/>
+If so you will see `rpm-build-6.0.0-1.fc43.x86_64` or something like that. If not it will be `package rpm-build is not installed`.
+
 Then install it from system repository
 
 ```SH
@@ -65,5 +66,6 @@ sudo dnf install *.rpm
 
 <hr>
 
-If using either than Fedora/CentOS Stream change the first string `set(assemble_tgz OFF)` in CMakeLists.txt to `set(assemble_tgz ON)` before building the Project. Move `.tar.gz` file to any folder and unpack it.<br/>
+If using either than Fedora/CentOS Stream change the first string `set(assemble_tgz OFF)` in CMakeLists.txt to `set(assemble_tgz ON)` before building the Project. Move `.tar.gz` file to any folder and unpack it.
+
 Then run `fifteen` from unpacked folder.
