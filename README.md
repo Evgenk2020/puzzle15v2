@@ -16,7 +16,7 @@ Press <b>`Esc`</b> to exit
 
 <b>To compile and run the game</b>
 
-1. Clone the Repository
+1. Select empty folder, open terminal and clone the repository
 
 ```SH
 
@@ -26,7 +26,15 @@ cd puzzle15v2
 
 ```
 
-2. Check for `rpm-build` package to be installed in your system. If not, install it from system repository
+2. Check for `rpm-build` package to be installed in your system.
+
+```SH
+
+rpm -q rpm-build
+
+```
+
+If installed you will see `rpm-build-6.0.0-1.fc43.x86_64` or something like that. If not you will see `package rpm-build is not installed`. Then install it from system repository
 
 ```SH
 
@@ -46,7 +54,7 @@ sudo dnf install rpm-build
 
 ```SH
 
-cd build && sudo dnf install *.rpm
+sudo dnf install *.rpm
 
 ```
 
