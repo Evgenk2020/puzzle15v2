@@ -14,6 +14,8 @@ Press <b>`Esc`</b> to exit
 
 <hr>
 
+<span style="color:red">This text is red</span>
+
 <b>To compile and run the game</b>
 
 1. Select empty folder, open terminal and clone the repository
