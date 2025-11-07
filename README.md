@@ -48,7 +48,7 @@ sudo dnf install rpm-build
 
 ```
 
-3. Build the Project with .rpm setup package for Fedora/CentOS Stream by default
+3. Build the Project with `.rpm` setup package for Fedora/CentOS Stream by default
 
 ```SH
 
