@@ -14,6 +14,10 @@ Press <b>`Esc`</b> to exit
 
 <hr>
 
+Check for [CMake](https://cmake.org/) before installing the application
+
+<hr>
+
 <b>To compile and run the game</b>
 
 1. Select empty folder, open terminal and clone the repository
