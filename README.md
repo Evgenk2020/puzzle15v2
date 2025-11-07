@@ -26,7 +26,7 @@ cd puzzle15v2
 
 ```
 
-2. Check for <span style="color:blue;">rpm-build</span> package to be installed in your system.
+2. Check for `rpm-build` package to be installed in your system.
 
 ```SH
 
@@ -34,7 +34,7 @@ rpm -q rpm-build
 
 ```
 
-If installed you will see `rpm-build-6.0.0-1.fc43.x86_64` or something like that. If not you will see `package rpm-build is not installed`. Then install it from system repository
+If installed you will see `rpm-build-6.0.0-1.fc43.x86_64` or something like that. If not it will be `package rpm-build is not installed`. Then install it from system repository
 
 ```SH
 
