@@ -38,9 +38,9 @@ rpm -q rpm-build
 
 ```
 
-If so you will see `rpm-build-6.0.0-1.fc43.x86_64` or something like that. If not it will be `package rpm-build is not installed`.
+If so you will see `rpm-build-6.0.0-1.fc43.x86_64` or something like that.
 
-Then install it from system repository
+If not it will be `package rpm-build is not installed`. Then install it from system repository
 
 ```SH
 
