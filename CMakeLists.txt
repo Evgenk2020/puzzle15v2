@@ -12,7 +12,7 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/build/bin)
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/build/lib/shared)
 set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/build/lib/static)
 
-project(fifteen VERSION 1.0.0 LANGUAGES CXX)
+project(fifteen VERSION 2.0.0 LANGUAGES CXX)
 
 add_library(data_gen SHARED ${CMAKE_SOURCE_DIR}/lib/data_gen.cpp)
 target_include_directories(data_gen PUBLIC ${CMAKE_SOURCE_DIR}/include)

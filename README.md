@@ -14,7 +14,11 @@ Press <b>`Esc`</b> to exit
 
 <hr>
 
-Check for [CMake](https://cmake.org/) before installing the application
+> You need
+> <br>
+> [CMake](https://cmake.org/)
+> <br>
+> to be installed on your Linux system previously
 
 <hr>
 
