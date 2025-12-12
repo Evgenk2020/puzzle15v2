@@ -6,5 +6,3 @@ CURR_DIR=$(dirname $CURR_DIR)
 
 export LD_LIBRARY_PATH=$CURR_DIR/lib
 $CURR_DIR/bin/fifteen
-
-exec $SHELL
