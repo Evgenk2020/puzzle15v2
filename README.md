@@ -1,3 +1,31 @@
+<p align="center">
+  <a href="https://github.com/Evgenk2020/puzzle15v2/blob/main/LICENSE">
+    <img src="https://img.shields.io/github/license/Evgenk2020/student-experiment" alt="license">
+  </a>
+  <a href="https://github.com/Evgenk2020/puzzle15v2/commits">
+    <img src="https://img.shields.io/github/last-commit/Evgenk2020/student-experiment" alt="last commit">
+  </a>
+  <a href="https://github.com/Evgenk2020/puzzle15v2">
+    <img src="https://img.shields.io/github/repo-size/Evgenk2020/student-experiment" alt="repo size">
+  </a>
+  <a href="https://github.com/Evgenk2020/puzzle15v2/stargazers">
+    <img src="https://img.shields.io/github/stars/Evgenk2020/student-experiment" alt="stars">
+  </a>
+  <a href="https://github.com/Evgenk2020/puzzle15v2/network/members">
+    <img src="https://img.shields.io/github/forks/Evgenk2020/student-experiment" alt="forks">
+  </a>
+  <a href="https://github.com/Evgenk2020/puzzle15v2">
+    <img src="https://img.shields.io/github/languages/top/Evgenk2020/student-experiment" alt="top language">
+  </a>
+  <a href="https://github.com/Evgenk2020/puzzle15v2/releases">
+    <img src="https://img.shields.io/github/v/release/Evgenk2020/student-experiment" alt="latest release">
+  </a>
+  <!-- Added version badge -->
+  <a href="https://github.com/Evgenk2020/puzzle15v2">
+    <img src="https://img.shields.io/badge/version-2.0.1-blue" alt="version">
+  </a>
+</p>
+
 # puzzle15v2
 
 <b>Puzzle 15 for Linux terminal</b>
