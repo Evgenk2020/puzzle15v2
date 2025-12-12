@@ -14,16 +14,16 @@ set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/build/lib/static)
 
 project(fifteen VERSION 2.0.1 LANGUAGES CXX)
 
-add_library(pzl_data_gen SHARED ${CMAKE_SOURCE_DIR}/lib/pzl_data_gen.cpp)
+add_library(pzl_data_gen SHARED ${CMAKE_SOURCE_DIR}/lib/data_gen.cpp)
 target_include_directories(pzl_data_gen PUBLIC ${CMAKE_SOURCE_DIR}/include)
 
-add_library(pzl_keys SHARED ${CMAKE_SOURCE_DIR}/lib/pzl_keys.cpp)
+add_library(pzl_keys SHARED ${CMAKE_SOURCE_DIR}/lib/keys.cpp)
 target_include_directories(pzl_keys PUBLIC ${CMAKE_SOURCE_DIR}/include)
 
 add_library(pzl_mswap SHARED ${CMAKE_SOURCE_DIR}/lib/m_swap.cpp)
 target_include_directories(pzl_mswap PUBLIC ${CMAKE_SOURCE_DIR}/include)
 
-add_library(pzl_print SHARED ${CMAKE_SOURCE_DIR}/lib/pzl_print.cpp)
+add_library(pzl_print SHARED ${CMAKE_SOURCE_DIR}/lib/print.cpp)
 target_include_directories(pzl_print PUBLIC ${CMAKE_SOURCE_DIR}/include)
 
 add_executable(${PROJECT_NAME} ${CMAKE_SOURCE_DIR}/src/main.cpp)
