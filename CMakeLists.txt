@@ -14,24 +14,24 @@ set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/build/lib/static)
 
 project(fifteen VERSION 2.0.1 LANGUAGES CXX)
 
-add_library(data_gen SHARED ${CMAKE_SOURCE_DIR}/lib/data_gen.cpp)
-target_include_directories(data_gen PUBLIC ${CMAKE_SOURCE_DIR}/include)
+add_library(pzl_data_gen SHARED ${CMAKE_SOURCE_DIR}/lib/pzl_data_gen.cpp)
+target_include_directories(pzl_data_gen PUBLIC ${CMAKE_SOURCE_DIR}/include)
 
-add_library(keys SHARED ${CMAKE_SOURCE_DIR}/lib/keys.cpp)
-target_include_directories(keys PUBLIC ${CMAKE_SOURCE_DIR}/include)
+add_library(pzl_keys SHARED ${CMAKE_SOURCE_DIR}/lib/pzl_keys.cpp)
+target_include_directories(pzl_keys PUBLIC ${CMAKE_SOURCE_DIR}/include)
 
-add_library(mswap SHARED ${CMAKE_SOURCE_DIR}/lib/m_swap.cpp)
-target_include_directories(mswap PUBLIC ${CMAKE_SOURCE_DIR}/include)
+add_library(pzl_mswap SHARED ${CMAKE_SOURCE_DIR}/lib/m_swap.cpp)
+target_include_directories(pzl_mswap PUBLIC ${CMAKE_SOURCE_DIR}/include)
 
-add_library(print SHARED ${CMAKE_SOURCE_DIR}/lib/print.cpp)
-target_include_directories(print PUBLIC ${CMAKE_SOURCE_DIR}/include)
+add_library(pzl_print SHARED ${CMAKE_SOURCE_DIR}/lib/pzl_print.cpp)
+target_include_directories(pzl_print PUBLIC ${CMAKE_SOURCE_DIR}/include)
 
 add_executable(${PROJECT_NAME} ${CMAKE_SOURCE_DIR}/src/main.cpp)
 target_include_directories(${PROJECT_NAME} PUBLIC ${CMAKE_SOURCE_DIR}/include)
-target_link_libraries(${PROJECT_NAME} PRIVATE data_gen keys mswap print)
+target_link_libraries(${PROJECT_NAME} PRIVATE pzl_data_gen pzl_keys pzl_mswap pzl_print)
 
 install(TARGETS ${PROJECT_NAME} RUNTIME DESTINATION bin)
-install(TARGETS data_gen keys mswap print LIBRARY DESTINATION lib)
+install(TARGETS pzl_data_gen pzl_keys pzl_mswap pzl_print LIBRARY DESTINATION lib)
 
 if(assemble_tgz)
     install(FILES ${CMAKE_SOURCE_DIR}/sources/fifteen DESTINATION "."
