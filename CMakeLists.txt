@@ -3,7 +3,7 @@ project(fifteen VERSION 2.0.2 LANGUAGES CXX)
 
 # -------------------------------------------------------------
 # to switch packaging to *.tar.gz >>> set(assemble_tgz ON)
-set(assemble_tgz ON)
+set(assemble_tgz OFF)
 # -------------------------------------------------------------
 
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
@@ -26,25 +26,24 @@ target_include_directories(${PROJECT_NAME} PUBLIC ${CMAKE_SOURCE_DIR}/include)
 target_link_libraries(${PROJECT_NAME} PRIVATE pzl_data_gen pzl_keys pzl_mswap pzl_print)
 # file(COPY ${CMAKE_SOURCE_DIR}/sources/fifteen DESTINATION ${CMAKE_BINARY_DIR})
 
-include(GNUInstallDirs)
-install(TARGETS ${PROJECT_NAME} RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR})
-install(TARGETS pzl_data_gen pzl_keys pzl_mswap pzl_print LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR})
-
-if(assemble_tgz)
-    install(FILES ${CMAKE_SOURCE_DIR}/sources/fifteen DESTINATION "."
-                        PERMISSIONS
-                        OWNER_READ OWNER_WRITE OWNER_EXECUTE
-                        GROUP_READ GROUP_EXECUTE 
-                        WORLD_READ WORLD_EXECUTE)
-endif()
+# -------------------------------------------------------------
+# packaging
 
 set(CPACK_PACKAGE_NAME ${PROJECT_NAME})
 set(CPACK_PACKAGE_VERSION "${PROJECT_VERSION}")
 set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "puzzle fifteen for Linux terminal")
 
 if(assemble_tgz)
+    install(TARGETS ${PROJECT_NAME} RUNTIME DESTINATION bin)
+    install(TARGETS pzl_data_gen pzl_keys pzl_mswap pzl_print LIBRARY DESTINATION lib)
+    install(FILES ${CMAKE_SOURCE_DIR}/sources/fifteen DESTINATION "." PERMISSIONS OWNER_READ OWNER_WRITE OWNER_EXECUTE GROUP_READ GROUP_EXECUTE WORLD_READ WORLD_EXECUTE)
+    
     set(CPACK_GENERATOR "TGZ")
 else()
+    include(GNUInstallDirs)
+    install(TARGETS ${PROJECT_NAME} RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR})
+    install(TARGETS pzl_data_gen pzl_keys pzl_mswap pzl_print LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR})
+
     set(CPACK_GENERATOR "RPM")
     set(CPACK_RPM_PACKAGE_RELOCATABLE "TRUE")
 endif()
