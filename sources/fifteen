@@ -1,6 +1,18 @@
 #!/bin/bash
 
-curr=$(dirname $(realpath $0))
+curr="$(cd "$(dirname "$0")" && pwd)"
+bin_path="$(find "$curr" -type f -name "fifteen" | head -n 1)"
 
-export LD_LIBRARY_PATH=$curr/lib
-$curr/bin/fifteen
+if [ -z "$bin_path" ]; then
+    echo "error. binary is not found..."
+    exit 1
+fi
+
+bin_final="$(dirname "$bin_path")"
+lib_final="$(find "$curr" -type d \( -name lib -o -name lib64 \) | head -n 1)"
+
+if [ -n "$lib_final" ]; then
+    export LD_LIBRARY_PATH="$lib_final:$LD_LIBRARY_PATH"
+fi
+
+exec "$bin_final" "$@"
