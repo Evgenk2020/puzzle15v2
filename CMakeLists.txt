@@ -1,7 +1,10 @@
 cmake_minimum_required(VERSION 3.31)
 project(fifteen VERSION 2.0.2 LANGUAGES CXX)
 
+# -------------------------------------------------------------
+# to switch packaging to *.tar.gz >>> set(assemble_tgz ON)
 set(assemble_tgz OFF)
+# -------------------------------------------------------------
 
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 set(CMAKE_CXX_STANDARD 23)
@@ -21,10 +24,11 @@ add_library(pzl_print SHARED ${CMAKE_SOURCE_DIR}/lib/print.cpp)
 add_executable(${PROJECT_NAME} ${CMAKE_SOURCE_DIR}/src/main.cpp)
 target_include_directories(${PROJECT_NAME} PUBLIC ${CMAKE_SOURCE_DIR}/include)
 target_link_libraries(${PROJECT_NAME} PRIVATE pzl_data_gen pzl_keys pzl_mswap pzl_print)
-file(COPY ${CMAKE_SOURCE_DIR}/sources/fifteen DESTINATION ${CMAKE_BINARY_DIR})
+# file(COPY ${CMAKE_SOURCE_DIR}/sources/fifteen DESTINATION ${CMAKE_BINARY_DIR})
 
-install(TARGETS ${PROJECT_NAME} RUNTIME DESTINATION bin)
-install(TARGETS pzl_data_gen pzl_keys pzl_mswap pzl_print LIBRARY DESTINATION lib)
+include(GNUInstallDirs)
+install(TARGETS ${PROJECT_NAME} RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR})
+install(TARGETS pzl_data_gen pzl_keys pzl_mswap pzl_print LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR})
 
 if(assemble_tgz)
     install(FILES ${CMAKE_SOURCE_DIR}/sources/fifteen DESTINATION "."
