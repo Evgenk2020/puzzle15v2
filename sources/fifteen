@@ -8,11 +8,10 @@ if [ -z "$bin_path" ]; then
     exit 1
 fi
 
-bin_final="$(dirname "$bin_path")"
 lib_final="$(find "$curr" -type d \( -name lib -o -name lib64 \) | head -n 1)"
 
 if [ -n "$lib_final" ]; then
     export LD_LIBRARY_PATH="$lib_final:$LD_LIBRARY_PATH"
 fi
 
-exec "$bin_final" "$@"
+exec "$bin_path" "$@"
