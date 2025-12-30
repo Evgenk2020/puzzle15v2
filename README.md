@@ -22,7 +22,7 @@
   </a>
   <!-- Added version badge -->
   <a href="https://github.com/Evgenk2020/puzzle15v2">
-    <img src="https://img.shields.io/badge/version-2.0.1-blue" alt="version">
+    <img src="https://img.shields.io/badge/version-2.0.2-blue" alt="version">
   </a>
 </p>
 
